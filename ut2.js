@@ -2,15 +2,15 @@ import readline from 'read-console-input'
 
 const a = Number(readline('number: '))
 let n = a
-function counter(n) {
-    let current = 1
 
-    if (n == 0)
-        current = 1
-    for (let i = 2; i <= n; i++)
-        current = current * i
-    console.log('current =', current)
-    console.log('number =', n)
+function counter(n) {
+    let current = n
+    for (let i = current - 1; i >= 1; i--) {
+        current *= i
+        console.log('current =', current)
+        console.log('number =', i)
+    }
     return current
 }
+
 console.log(counter(n));
